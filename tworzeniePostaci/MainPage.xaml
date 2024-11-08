@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="tworzeniePostaci.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout HorizontalOptions="Center">
+            <Label Text="Tworzenie postaci:" HorizontalTextAlignment="Center"/>
+            <HorizontalStackLayout>
+                <Label Text="imię: "/>
+                <Entry x:Name="entName"/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <Label Text="rasa:"/>
+                <RadioButton Content="człowiek" IsChecked="True" x:Name="radioHuman"/>
+                <RadioButton Content="elf" x:Name="radioElf"/>
+                <RadioButton Content="goblin" x:Name="radioGoblin"/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <Label Text="klasa: "/>
+                <Picker x:Name="pickerClass">
+                    <Picker.Items>
+                        <x:String>Wojownik</x:String>
+                        <x:String>Mag</x:String>
+                        <x:String>Złodziej</x:String>
+                        <x:String>Paladyn</x:String>
+                        <x:String>Warlock</x:String>
+                        <x:String>Myśliwy</x:String>
+                    </Picker.Items>
+                </Picker>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <Label Text="czy dorosły: "/>
+                <CheckBox x:Name="checkAdult"/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <Label Text="wzrost: "/>
+                <Entry x:Name="entWzrost"/>
+            </HorizontalStackLayout>
+            <Label Text="siła + moc = 100"/>
+            <HorizontalStackLayout>
+                <Label Text="siła"/>
+                <Entry x:Name="entStrength"/>
+                <Label Text="moc"/>
+                <Entry IsReadOnly="True" x:Name="entPower"/>
+            </HorizontalStackLayout>
+            <Button HorizontalOptions="Center" Clicked="onGenerateClicked"/>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
