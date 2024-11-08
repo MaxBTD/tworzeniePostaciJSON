@@ -44,7 +44,8 @@
                 <Label Text="moc"/>
                 <Entry IsReadOnly="True" x:Name="entPower"/>
             </HorizontalStackLayout>
-            <Button HorizontalOptions="Center" Clicked="onGenerateClicked"/>
+            <Button HorizontalOptions="Center" Clicked="onGenerateClicked" Text="generuj"/>
+            <Label TextColor="Red" x:Name="lblError"/>
         </VerticalStackLayout>
     </ScrollView>
 
