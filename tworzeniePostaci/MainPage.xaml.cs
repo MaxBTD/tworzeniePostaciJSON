@@ -88,6 +88,8 @@ namespace tworzeniePostaci
                     sila = sila,
                     moc = moc
                 };
+
+                //OUTPUT JSON'a
                 postacJSON = JsonSerializer.Serialize(nowaPostac); 
             }
         }

@@ -4,21 +4,21 @@
              x:Class="tworzeniePostaci.MainPage">
 
     <ScrollView>
-        <VerticalStackLayout HorizontalOptions="Center">
-            <Label Text="Tworzenie postaci:" HorizontalTextAlignment="Center"/>
+        <VerticalStackLayout HorizontalOptions="Center" Spacing="10">
+            <Label Text="Tworzenie postaci:" HorizontalTextAlignment="Center" FontSize="20" Margin="0,0,20,30"/>
             <HorizontalStackLayout>
-                <Label Text="imię: "/>
-                <Entry x:Name="entName"/>
+                <Label Text="imię: " Margin="0,10"/>
+                <Entry x:Name="entName" Margin="100,0,0,0" WidthRequest="150" />
             </HorizontalStackLayout>
             <HorizontalStackLayout>
-                <Label Text="rasa:"/>
-                <RadioButton Content="człowiek" IsChecked="True" x:Name="radioHuman"/>
-                <RadioButton Content="elf" x:Name="radioElf"/>
+                <Label Text="rasa:" Margin="0,10,15,0"/>
+                <RadioButton Content="człowiek" IsChecked="True" x:Name="radioHuman" Margin="0,0,10,0"/>
+                <RadioButton Content="elf" x:Name="radioElf" Margin="0,0,10,0"/>
                 <RadioButton Content="goblin" x:Name="radioGoblin"/>
             </HorizontalStackLayout>
             <HorizontalStackLayout>
-                <Label Text="klasa: "/>
-                <Picker x:Name="pickerClass">
+                <Label Text="klasa: " Margin="0,10,95,0"/>
+                <Picker x:Name="pickerClass" WidthRequest="150">
                     <Picker.Items>
                         <x:String>Wojownik</x:String>
                         <x:String>Mag</x:String>
@@ -30,22 +30,22 @@
                 </Picker>
             </HorizontalStackLayout>
             <HorizontalStackLayout>
-                <Label Text="czy dorosły: "/>
+                <Label Text="czy dorosły: " Margin="0,10, 25, 0"/>
                 <CheckBox x:Name="checkAdult"/>
             </HorizontalStackLayout>
             <HorizontalStackLayout>
-                <Label Text="wzrost: "/>
-                <Entry x:Name="entWzrost"/>
+                <Label Text="wzrost: " Margin="0,10,135,0"/>
+                <Entry x:Name="entWzrost" WidthRequest="100"/>
             </HorizontalStackLayout>
-            <Label Text="siła + moc = 100"/>
+            <Label Text="siła + moc = 100" Margin="0,10,0,0"/>
             <HorizontalStackLayout>
-                <Label Text="siła"/>
-                <Entry x:Name="entStrength"/>
-                <Label Text="moc"/>
-                <Entry IsReadOnly="True" x:Name="entPower"/>
+                <Label Text="siła" Margin="0,10,25,0"/>
+                <Entry x:Name="entStrength" WidthRequest="75"/>
+                <Label Text="moc" Margin="30,10,25,0"/>
+                <Entry IsReadOnly="True" x:Name="entPower" WidthRequest="75"/>
             </HorizontalStackLayout>
-            <Button HorizontalOptions="Center" Clicked="onGenerateClicked" Text="generuj"/>
-            <Label TextColor="Red" x:Name="lblError"/>
+            <Button HorizontalOptions="Center" Clicked="onGenerateClicked" Text="generuj" Padding="35,10" Margin="0,20"/>
+            <Label TextColor="Red" x:Name="lblError" FontSize="11"/>
         </VerticalStackLayout>
     </ScrollView>
 
